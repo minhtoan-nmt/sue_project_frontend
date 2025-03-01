@@ -37,4 +37,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## GitHub Webhook
 
-I have updated the Webhook to bot channel on Discord. Check it out!
+I have updated the Webhook to bot channel on Discord. Check it out on #bot!
