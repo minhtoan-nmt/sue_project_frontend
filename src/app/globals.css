@@ -43,4 +43,8 @@ a {
   }
 } */
 
+@theme {
+  --background-red: #D84040;
+  --foreground-white: #FFFFFF;
+}
 
