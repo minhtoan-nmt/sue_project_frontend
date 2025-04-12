@@ -26,7 +26,7 @@ export function Section2() {
         { key: "Number of Years", value: 5 }];
     const list = data.map((item) => {
         return (
-            <div className="flex flex-col justify-center items-center w-1/6">
+            <div key={item.key} className="flex flex-col justify-center items-center w-1/6">
                 <h1 className="text-5xl font-bold mb-2">{item.value}</h1>
                 <p className="text-2xl">{item.key}</p>
             </div>
