@@ -10,7 +10,7 @@ export function Navbar() {
           <div className="flex flex-row justify-evenly items-center w-4/5">
             <p>HOME</p>
             <p>ABOUT CENTER</p>
-            <p>COURSES</p>
+            <Link href="/courses">COURSES</Link>
             <p>FAQS</p>
             <p>BLOGS</p>
           </div>

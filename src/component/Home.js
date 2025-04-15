@@ -50,7 +50,7 @@ export function Section3() {
     ]
     const list = categories.map((item) => {
         return (
-            <div className="flex flex-col justify-start items-start p-12 bg-(--background-gray) rounded-sm ">
+            <div key={item.bnum} className="flex flex-col justify-start items-start p-12 bg-(--background-gray) rounded-sm ">
                 <Bookmark number={item.bnum} />
                 <h1 className="text-2xl font-bold mb-6">{item.title}</h1>
                 <p className="text-lg">{item.body}</p>
