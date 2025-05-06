@@ -1,4 +1,3 @@
-// File: src/component/dashboard/Overview.jsx
 
 export default function Overview() {
     return (

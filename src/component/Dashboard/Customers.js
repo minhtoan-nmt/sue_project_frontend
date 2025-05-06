@@ -1,4 +1,4 @@
-// File: src/component/dashboard/Customers.jsx
+
 
 export default function Customers() {
   return (
