@@ -10,24 +10,24 @@ export default function Sidebar() {
         <div className="mt-[42px] ml-[40px] flex flex-col gap-8">
           <div className="flex items-center gap-3 text-[#282938] font-medium text-[14px]">
             <img src="/icons/dashboard.png" alt="Dashboard" className="w-[22px] h-[22px]" />
-            <span>Dashboard</span>
+            <span>Document</span>
           </div>
           <div className="flex items-center gap-3 text-[#B8B9D2] font-medium text-[14px]">
             <img src="/icons/course.png" alt="Courses" className="w-[22px] h-[22px]" />
-            <span>My Courses</span>
+            <span>Evaluation</span>
           </div>
           <div className="flex items-center gap-3 text-[#B8B9D2] font-medium text-[14px]">
             <img src="/icons/event.png" alt="Events" className="w-[22px] h-[22px]" />
-            <span>My Events</span>
+            <span>Student information</span>
           </div>
-          <div className="flex items-center gap-3 text-[#B8B9D2] font-medium text-[14px]">
+          {/* <div className="flex items-center gap-3 text-[#B8B9D2] font-medium text-[14px]">
             <img src="/icons/settings.png" alt="Settings" className="w-[22px] h-[22px]" />
             <span>Settings</span>
           </div>
           <div className="flex items-center gap-3 text-[#B8B9D2] font-medium text-[14px]">
             <img src="/icons/help.png" alt="Help" className="w-[22px] h-[22px]" />
             <span>Help</span>
-          </div>
+          </div> */}
         </div>
       </div>
     );

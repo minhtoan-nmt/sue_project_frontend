@@ -8,8 +8,8 @@ export function Navbar() {
         <Image src={logo} alt="S.U.E. Logo" width={64} height={64} className="rounded-full"/>
         <div className="flex flex-row justify-evenly xl:w-1/2 w-3/4">
           <div className="flex flex-row justify-evenly items-center w-4/5">
-            <p>HOME</p>
-            <p>ABOUT CENTER</p>
+            <Link href="/">HOME</Link>
+            <Link href="/about">ABOUT CENTER</Link>
             <Link href="/courses">COURSES</Link>
             <p>FAQS</p>
             <p>BLOGS</p>

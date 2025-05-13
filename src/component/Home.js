@@ -7,11 +7,11 @@ export function Section1() {
     return (
         <div className="bg-(--background-red) text-(--foreground-white) flex flex-row justify-between items-center px-24 h-120">
             <div className="">
-                <h1 className="text-6xl font-bold mb-12">Anh ngữ Quốc tế Tăng Tốc</h1>
-                <p className="text-2xl mb-12">Cung cấp các khóa học tiếng Anh tốt nhất</p>
+                <h1 className="text-6xl font-bold mb-12">Speed Up English Center</h1>
+                <p className="text-2xl mb-12">Provide students with numerous high-quality courses</p>
                 <div className="flex flex-row justify-start mb-12">
-                    <button className="px-6 py-3 bg-(--yellow) text-(--black-letter) rounded-sm">Đăng kí ngay</button>
-                    <button className="flex flex-row px-6 py-3">Xem khóa học <FaArrowRightLong size={24} className="mx-3"/></button>
+                    <button className="px-6 py-3 bg-(--yellow) text-(--black-letter) rounded-sm">Register Now</button>
+                    <button className="flex flex-row px-6 py-3">Courses <FaArrowRightLong size={24} className="mx-3"/></button>
                 </div>
             </div>
             <PRImage />
