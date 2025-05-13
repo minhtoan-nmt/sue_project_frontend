@@ -17,15 +17,15 @@ export default function DashboardPage() {
           <UserInfo />
         </div>
 
-        {/* Overview & Statistics */}
-        <div className="flex flex-col xl:flex-row gap-6">
+        {/* Overview & Customers side-by-side */}
+        {/* <div className="flex flex-col xl:flex-row gap-6">
           <div className="flex-1">
             <Overview />
           </div>
           <div className="w-full xl:w-[304px]">
             <Customers />
           </div>
-        </div>
+        </div> */}
 
         {/* Course List */}
         <CourseList />
