@@ -1,9 +1,16 @@
+'use client'
+
 import Image from "next/image";
 import logo from "@/../public/logo_img.jpg";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 
 export function Footer() {
+    const pathName = usePathname();
+        if (pathName.startsWith("/auth")) {
+          return null;
+        }
     return (
         <div>
             <div className="bg-(--background-red) text-(--foreground-white) px-24 pt-12">
@@ -15,7 +22,7 @@ export function Footer() {
                     </div>
                     <div className="pt-6">
                         <h1 className="text-xl font-bold mb-4">Social Media</h1>
-                        <Link href="https://www.facebook.com/S.U.ECC2018" className="text-lg mb-2">Facebook</Link>
+                        <Link href="https://www.facebook.com/S.U.ECC2018" target="_blank" className="text-lg mb-2">Facebook</Link>
                         <p className="text-lg mb-2 mt-2">Instagram</p>
                         <p className="text-lg mb-2">Twitter</p>
                     </div>
