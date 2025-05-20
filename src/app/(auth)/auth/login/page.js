@@ -1,7 +1,9 @@
 'use client';
 
+import { logIn } from '@/component/Auth/logIn';
 import Image from 'next/image';
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
 
 export default function Login() {
   return (
@@ -62,14 +64,29 @@ export default function Login() {
               <p className="text-white text-[16px] leading-[28px] font-medium mb-6">
                 Prepare yourself for a future full of stars
               </p>
-              <form className="flex flex-col gap-4">
+              <form className="flex flex-col gap-4" onSubmit={(e) => {
+                e.preventDefault();
+                let success = false;
+                logIn(e.target.email.value, e.target.password.value, success).then((success) => {
+                  console.log(success);
+                  if (!success) {
+                    alert("Log in failed");
+                  } else {
+                    alert("Log in successfully");
+                    redirect("/");
+                  }
+
+                });
+              }}>
                 <input
                   type="email"
                   placeholder="Enter your email"
+                  name="email"
                   className="px-4 py-3 rounded-md border border-white bg-transparent text-white placeholder-white text-[14px] leading-[21px]"
                 />
                 <input
                   type="password"
+                  name="password"
                   placeholder="Enter your password"
                   className="px-4 py-3 rounded-md border border-white bg-transparent text-white placeholder-white text-[14px] leading-[21px]"
                 />
