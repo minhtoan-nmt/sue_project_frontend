@@ -37,7 +37,7 @@ const courses = [
   },
 ];
 
-export default function CourseList() {
+export default function CourseList({items}) {
   return (
     <div className="bg-white p-6 rounded-[30px] shadow-sm">
       {/* Header */}
@@ -92,13 +92,13 @@ export default function CourseList() {
       {/* Table Header */}
       <div className="flex items-center justify-between h-[35px] border-b border-[#EEEEEE] text-[#B5B7C0] text-[14px] font-medium mt-2">
         <span className="w-1/2">Course Name</span>
-        <span className="w-1/4 text-center">Progress</span>
+        {/* <span className="w-1/4 text-center">Progress</span> */}
         <span className="w-1/4 text-right pr-2">Status</span>
       </div>
 
       {/* Course List */}
       <div className="space-y-6 mt-4">
-        {courses.map((course) => (
+        {items.map((course) => (
           <div key={course.id} className="flex justify-between items-start">
             {/* Left: Image + Info */}
             <div className="flex items-start gap-4 w-1/2">
@@ -120,7 +120,7 @@ export default function CourseList() {
             </div>
 
             {/* Center: Progress Bar */}
-            <div className="w-1/4 pr-6">
+            {/* <div className="w-1/4 pr-6">
               <div className="flex justify-between text-[14px] font-medium text-[#1C1E53] mb-1">
                 <span></span>
                 <span>{course.progress}%</span>
@@ -131,20 +131,20 @@ export default function CourseList() {
                   style={{ width: `${course.progress}%` }}
                 />
               </div>
-            </div>
+            </div> */}
 
             {/* Right: Status */}
             <div className="w-1/4 flex justify-end items-center">
-              {course.status === 'Certificate' ? (
+              {course.status === 'Complete' ? (
                 <span className="text-[14px] bg-[#FCD980] text-[#1C1E53] font-medium px-4 py-[4px] rounded-[8px]">
-                  Certificate
+                  Complete
                 </span>
               ) : (
                 <a
                   href="#"
                   className="text-[14px] font-medium text-[#1C1E53] underline hover:text-[#0a0e90]"
                 >
-                  Continue
+                  Pending
                 </a>
               )}
             </div>

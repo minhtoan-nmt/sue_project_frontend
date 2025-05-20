@@ -26,7 +26,7 @@ export async function logIn(username, password, success) {
 
     const cookie = await cookies();
     cookie.set("token", data.data.token, {
-        expires: Date.now() + 3600 * 24,
+        expires: Date.now() + 60*60*24*1000,
     });
     success = true;
     return data.success;
