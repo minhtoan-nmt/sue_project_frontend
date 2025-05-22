@@ -8,6 +8,12 @@ export async function middleware(request) {
     if (!token && request.nextUrl.pathname !== "/auth/login") {
         return NextResponse.redirect(new URL("/auth/login", request.url));
     }
+    if (token) {
+      const role = cookie.get("role");
+      if (role!=="Admin" && request.nextUrl.pathname === "/admin") {
+        return NextResponse.redirect(new URL("/", request.url));
+      }
+    }
 }
 
 export const config = {

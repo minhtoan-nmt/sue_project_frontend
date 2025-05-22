@@ -67,13 +67,14 @@ export default function Login() {
               <form className="flex flex-col gap-4" onSubmit={(e) => {
                 e.preventDefault();
                 let success = false;
-                logIn(e.target.email.value, e.target.password.value, success).then((success) => {
-                  console.log(success);
-                  if (!success) {
+                logIn(e.target.email.value, e.target.password.value, success).then((data) => {
+                  console.log(data.role);
+                  if (!data) {
                     alert("Log in failed");
                   } else {
                     alert("Log in successfully");
-                    redirect("/");
+                    if (data.role==="Admin") redirect("/admin");
+                    else redirect("/");
                   }
 
                 });

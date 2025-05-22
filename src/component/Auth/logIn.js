@@ -28,6 +28,9 @@ export async function logIn(username, password, success) {
     cookie.set("token", data.data.token, {
         expires: Date.now() + 60*60*24*1000,
     });
+    cookie.set("role", data.data.role, {
+        expires: Date.now() + 60*60*24*1000,
+    })
     success = true;
-    return data.success;
+    return data.data;
 }
