@@ -9,8 +9,8 @@ export async function middleware(request) {
         return NextResponse.redirect(new URL("/auth/login", request.url));
     }
     if (token) {
-      const role = cookie.get("role");
-      if (role!=="Admin" && request.nextUrl.pathname === "/admin") {
+      const role = cookie.get("role").value;
+      if (role !=="Admin" && request.nextUrl.pathname === "/admin") {
         return NextResponse.redirect(new URL("/", request.url));
       }
     }

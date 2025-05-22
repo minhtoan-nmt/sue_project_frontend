@@ -8,7 +8,7 @@ import { useRouter, usePathname } from "next/navigation";
 export function Navbar() {
     const router = useRouter();
     const pathName = usePathname();
-    if (pathName.startsWith("/auth")) {
+    if (pathName.startsWith("/auth") || pathName.startsWith("/admin")) {
       return null;
     }
     return (
