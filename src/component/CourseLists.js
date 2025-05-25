@@ -17,12 +17,12 @@ export function CourseItem() {
                     <Image src={course.imageSrc} alt={course.name} className="w-full h-48 object-cover rounded-lg mb-4" />
                     <h2 className="text-xl font-bold mb-2">{course.name}</h2>
                     <p className="text-gray-600">{course.description}</p>
-                    {/* <Link href={`/courses/${course.id}`} className="text-blue-500 mt-4 inline-block">View Details</Link> */}
+                    <Link href={`/courses/${course.id}`} className="text-blue-500 mt-4 inline-block">View Details</Link>
                 </div>
             ))}
         </div>
     )
-}
+} 
 
 export default function CourseLists() {
     return (
