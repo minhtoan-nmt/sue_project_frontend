@@ -13,7 +13,7 @@ export function CourseItem() {
     return (
         <div className="grid grid-cols-3 gap-12 p-24">
             {courses.map((course) => (
-                <Link href="/dashboard"><div key={course.id} className="bg-gray-100 rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
+                <Link key={course.id} href="/dashboard"><div className="bg-gray-100 rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
                     <Image src={course.imageSrc} alt={course.name} className="w-full h-48 object-cover rounded-lg mb-4" />
                     <h2 className="text-xl font-bold mb-2">{course.name}</h2>
                     <p className="text-gray-600">{course.description}</p>

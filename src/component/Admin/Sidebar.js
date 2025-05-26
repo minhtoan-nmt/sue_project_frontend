@@ -1,6 +1,6 @@
 'use client'
 
-import { FaUserAlt } from "react-icons/fa";
+import { FaDiscourse } from "react-icons/fa";
 import { CiSun } from "react-icons/ci";
 import { FaToggleOff, FaUsers } from "react-icons/fa6";
 import Image from "next/image";
@@ -11,6 +11,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaQq } from "react-icons/fa";
+import { MdAppRegistration } from "react-icons/md";
 
 export function HeaderSidebar() {
     return (
@@ -36,17 +37,17 @@ export function Menu() {
         {
             itemName: "Users",
             icon: <FaUsers />,
-            link: "/admin/user"
+            link: "/admin/users"
         },
         {
-            itemName: "Products",
-            icon: <BsStack />,
-            link: "/admin/products"
+            itemName: "Courses",
+            icon: <FaDiscourse />,
+            link: "/admin/courses"
         },
         {
-            itemName: "Invoices",
-            icon: <BsCollectionFill />,
-            link: "/admin/invoices"
+            itemName: "Registrations",
+            icon: <MdAppRegistration />,
+            link: "/admin/registration"
         },
         {
             itemName: "Posts",

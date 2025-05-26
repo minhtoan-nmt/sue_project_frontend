@@ -26,10 +26,14 @@ export async function logIn(username, password, success) {
 
     const cookie = await cookies();
     cookie.set("token", data.data.token, {
-        expires: Date.now() + 60*60*24*1000,
+        expires: new Date(Date.now() + 60*60*24*1000),
+        httpOnly: true,
+        secure: true,
     });
     cookie.set("role", data.data.role, {
-        expires: Date.now() + 60*60*24*1000,
+        expires: new Date(Date.now() + 60*60*24*1000),
+        httpOnly: true,
+        secure: true,
     })
     success = true;
     return data.data;
