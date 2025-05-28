@@ -63,6 +63,7 @@ export default function CourseSlides() {
               <span className="text-xl leading-none">•</span>
               {doc.name}
             </div>
+            {/* After click Dowload and Preview button, open in new tab */}
             <div className="flex gap-3 mt-2 md:mt-0">
               <a
                 href={doc.url}
