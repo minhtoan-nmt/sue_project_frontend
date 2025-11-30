@@ -43,4 +43,11 @@ a {
   }
 } */
 
+@theme {
+  --background-red: #D84040;
+  --foreground-white: #FFFFFF;
+  --yellow: #FCD980;
+  --black-letter: #282938;
+  --background-gray: #EEF4FA;
+}
 
